@@ -1,0 +1,150 @@
+#wrapper {
+  display: grid;
+  justify-items: center;
+}
+#flexbox {
+  display: grid;
+  justify-items: center;
+}
+#elements {
+  display: grid;
+  justify-items: center;
+}
+#grid-items {
+  display: grid;
+  justify-items: center;
+}
+#css-grid {
+  display: grid;
+  justify-items: center;
+}
+.squares{
+  padding-top: 500px;
+  padding-bottom: 700px;
+  border: 2px dashed black;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  /* .blue {
+    order: 0; /*  will take negative values, but won't wrap just like the other way
+  } */
+  .green {
+    align-self: flex-end;
+  }
+ 
+}
+#main {
+  /* width: 500px;
+  height: 200px; */
+  /* padding-top: 700px;
+  padding-bottom: 300px; */
+  /* width: 100%; (Taking this away is what made the align-self start to work) */
+  height: 300px;
+  border: 1.5px solid black;
+  /* padding-right: 100%; */
+  display: flex;
+  width: 500px;
+  column-gap: 30px;
+  /* flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;  LOOK AT THIS LINE */
+  /* align-items: center; */
+  /* flex-flow: column-reverse wrap;*/
+ 
+}
+ /* (This part sets everything equal to each other) nothing to inherit from :) TADA */
+/* #main div {
+  flex: auto;
+} */
+/* (This only affects the one whose number is in the parenthesis) */
+#main div {
+  /* flex: 1; (Taking this away made justify-content work)*/
+  width: 250px; /*(WIDTH HAS TO BE SET FOR BASELINE TO WORK)*/
+}
+#black, #blue {
+  color: white;
+}
+.css-grid {
+  display: grid;
+  justify-items: center;
+ 
+}
+/*.item1 { grid-area: header; }
+.item2 { grid-area: menu; }
+.item3 { grid-area: main; }
+.item4 { grid-area: right; }
+.item5 { grid-area: footer; }
+ can't have irregular shapes */
+  /* LOOK AT CODE BELOW */
+.test {
+  margin-top: 500px;
+  margin-bottom: 500px;
+  margin-left: 175px;
+  display: grid;
+  grid-template-columns: auto auto auto auto; 
+  grid-gap: 2.5px;
+  background-color: #2196F3;
+  padding: 2.5px;
+  /* width: 400px; */
+  height: 200px;
+  width: 500px;
+  /*  grid-template-areas:
+    'header header header header header header'
+    'menu main main main right right'
+    'menu footer footer footer footer footer'; */
+}
+ .test > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
+  /* width: 500px;
+  display: flex;
+   justify-content: center;
+   align-items: center;
+   font-size: 30px; */
+  }
+  .item5 {
+    align-self: auto; /* default value :) */
+  }
+   .test2 {
+    /* margin-left: 175px; */
+    display: grid;
+    /* grid-gap: 3px; */
+    grid-gap: 4px 1px; /* LOOK HERE */
+    grid-template: auto auto auto / auto auto auto; /* row size / column size */
+    /* grid-template-areas: 'thing1 thing1 . .', 'thing1 . . .'; sets thing1 to two columns :) */
+    height: 300px;
+    width: 500px;
+    background-color: pink;
+    justify-items: legacy; /* default value :) */
+  }
+  .test2 > div {
+    background-color: red;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 30px;
+   
+   
+ }
+  .thing2 {
+    grid-row: 4;
+  }
+  .thing3 {
+    grid-column: 4;
+  }
+  .thing4 {
+    grid-row: 4;
+    grid-column: 4;
+  }
+  /* LOOK AT CODE ABOVE */
+   /*.desEx p {
+    color: purple;
+ }
+ /* div > video {
+   border: 2px dashed blue;
+ }
+ .apple ~ p {
+   color: blue;
+ }  all elements after apple will be affected :) */
